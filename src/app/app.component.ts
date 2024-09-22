@@ -8,6 +8,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent implements OnInit {
   title = 'pokeApi';
+  public value:string ='';
 
   constructor(private primengConfig: PrimeNGConfig) {}
 

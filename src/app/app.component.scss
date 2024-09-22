@@ -1,0 +1,10 @@
+.corner-image {
+  position: absolute;
+  top: -25px;
+  right: -30px;
+  width: 100px;
+  height: auto;
+  z-index: 10;
+  clip-path: inset(25% 20% 0 0);
+}
+
