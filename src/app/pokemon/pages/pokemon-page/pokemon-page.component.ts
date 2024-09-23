@@ -25,7 +25,7 @@ export class PokemonPageComponent {
   }
 
   ngOnInit(): void {
-    this.loadPokemons('150')
+    this.loadPokemons('151')
   }
 
 
