@@ -27,8 +27,6 @@ import { PokemonModule } from './pokemon/pokemon.module';
     CommonModule,
     FormsModule,
 
-    //own modules
-    SharedModule,
     PokemonModule,
 
     // prime ng modules

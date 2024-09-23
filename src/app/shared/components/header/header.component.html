@@ -5,7 +5,9 @@
   <div class="col-12 md:col-10 p-4">
     <span class="p-input-icon-left w-11">
       <i class="pi pi-search"></i>
-      <input pInputText placeholder="Search" class="w-11" />
+      <input pInputText placeholder="Type Pikachu or 25..." class="w-11"
+        (keyup)="onKeyUp(searchBoxInput.value)"
+        #searchBoxInput/>
     </span>
   </div>
 </div>

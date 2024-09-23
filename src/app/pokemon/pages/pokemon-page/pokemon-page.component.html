@@ -1,0 +1,14 @@
+<div class="pokemon-pages">
+  <div class="pokemon-image">
+    <img src="assets/poke-ball.png" alt="pokemon-logo" class="corner-image" />
+  </div>
+
+  <div class="page-header">
+    <shared-header (debaunceSearchTerm)="onSearchTermChange($event)" ></shared-header>
+  </div>
+
+  <pokemon-poke-cards [pokemonList]="filterPokemonList" ></pokemon-poke-cards>
+  <div *ngIf="notFound" class="not-found bg-yellow-200 p-3">
+    <p>No se encontraron pokemons con los parametros de busqueda... :c</p>
+  </div>
+</div>

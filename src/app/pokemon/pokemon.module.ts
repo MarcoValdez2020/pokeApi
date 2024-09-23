@@ -7,10 +7,13 @@ import { PokeCardsComponent } from './components/poke-cards/poke-cards.component
 import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { PokemonPageComponent } from './pages/pokemon-page/pokemon-page.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
-    PokeCardsComponent
+    PokeCardsComponent,
+    PokemonPageComponent
   ],
   imports: [
     CommonModule,
@@ -21,9 +24,13 @@ import { ButtonModule } from 'primeng/button';
     CardModule,
     ButtonModule,
 
+    //own modules
+     //own modules
+     SharedModule,
+
   ],
   exports:[
-    PokeCardsComponent
+    PokemonPageComponent
   ]
 })
 export class PokemonModule { }

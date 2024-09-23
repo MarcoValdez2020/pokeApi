@@ -27,4 +27,15 @@ export class PokeApiService {
   }
 
 
+  public filterPokemons(term:string, pokemonList:PokemonInfo[]):PokemonInfo[]{
+      const searchTerm:string = term.toLowerCase()
+      return pokemonList.filter(
+        (pokemon) =>
+          pokemon.name.toLowerCase().includes(searchTerm) ||
+          pokemon.id.toString().includes(searchTerm)
+
+      );
+  }
+
+
 }
