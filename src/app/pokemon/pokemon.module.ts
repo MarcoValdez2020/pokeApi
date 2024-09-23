@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
 import { PokeCardsComponent } from './components/poke-cards/poke-cards.component';
 
-import { ChipsModule } from 'primeng/chips';
 import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
@@ -14,6 +15,7 @@ import { ButtonModule } from 'primeng/button';
   imports: [
     CommonModule,
     FormsModule,
+    HttpClientModule,
 
     // prime ng
     CardModule,
