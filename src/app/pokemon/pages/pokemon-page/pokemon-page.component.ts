@@ -50,20 +50,27 @@ export class PokemonPageComponent {
   }
 
   onSearchTermChange(searchTerm: string) {
-    if(searchTerm ===''){
-      // si borramos el termino de busqueda se reestablece el valor
-      this.filterPokemonList = this.pokemonList;
-      // restablecemos not found a false para que no aparezca el componente
-      this.notFound=false;
-      return;
-    }
+    if (searchTerm === '') {
+        // Si se borramos el término de búsqueda, restablecemos el valor
+        this.filterPokemonList = this.pokemonList;
+        // Restablecemos not found a false para que no aparezca
+        this.notFound = false;
+    } else {
+        // Filtramos la lista de Pokémon
+        const filteredList = this.pokeApi.filterPokemons(searchTerm, this.pokemonList);
 
-    this.filterPokemonList = this.pokeApi.filterPokemons(searchTerm,this.filterPokemonList)
-    if(this.filterPokemonList.length===0){
-      this.notFound=true;
+        // Si encontramos resultados, actualizamos filterPokemonList
+        if (filteredList.length > 0) {
+            this.filterPokemonList = filteredList;
+            this.notFound = false; // Restablecer notFound
+        } else {
+          // no encontramos nada entonces vaciamos la lista y mostramos notfound
+            this.filterPokemonList = [];
+            this.notFound = true;
+        }
     }
+}
 
-  }
 
 
 }
