@@ -44,5 +44,4 @@ export class PokeCardsComponent  implements OnInit{
     });
   }
 
-
 }
