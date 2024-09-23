@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { PokemonModule } from './pokemon/pokemon.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 
     //own modules
     SharedModule,
+    PokemonModule,
 
     // prime ng modules
     ButtonModule,

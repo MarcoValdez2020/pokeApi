@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { HeaderComponent } from './components/header/header.component';
 
 import { ToolbarModule } from 'primeng/toolbar';
 import { InputIconModule } from 'primeng/inputicon';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     InputIconModule,
     IconFieldModule,
     InputTextModule,
+    FloatLabelModule,
 
   ],
   exports:[

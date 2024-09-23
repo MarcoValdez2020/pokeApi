@@ -4,4 +4,10 @@
 // @import "primeng/resources/themes/aura-dark-noir/theme.css";
 @import "primeng/resources/themes/aura-light-noir/theme.css";
 
-
+html,body{
+  overflow-x: hidden;
+  height:100%;
+  width:101%;
+  margin: 0px;
+  padding: 0px;
+}

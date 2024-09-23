@@ -1,0 +1,32 @@
+.poke-cards-container{
+  margin: 10px auto;
+  width: 95%;
+}
+
+.poke-card-content {
+  border-radius: 15px;
+}
+
+.relative-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; // Mantiene el contenido dentro de los límites del contenedor
+
+  .bg-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; // Para mantener la imagen dentro de los límites responsivos
+    height: auto;
+  }
+
+  .pokemon-image {
+    position: relative;
+    max-width: 100%; // Se ajusta al tamaño del contenedor de manera responsiva
+    height: auto;
+  }
+}
+
