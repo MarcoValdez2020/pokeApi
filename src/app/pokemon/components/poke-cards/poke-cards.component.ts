@@ -20,7 +20,7 @@ export class PokeCardsComponent  implements OnInit{
   }
 
   ngOnInit(): void {
-    this.loadPokemons('10')
+    this.loadPokemons('150')
   }
 
 
