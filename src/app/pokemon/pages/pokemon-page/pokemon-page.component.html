@@ -6,7 +6,6 @@
   <div class="page-header">
     <shared-header (debaunceSearchTerm)="onSearchTermChange($event)" ></shared-header>
   </div>
-  <pokemon-pokemon-stats></pokemon-pokemon-stats>
   <pokemon-poke-cards [pokemonList]="filterPokemonList" ></pokemon-poke-cards>
   <div *ngIf="notFound" class="not-found bg-yellow-200 p-3 text-center border-round">
     <p>No se encontraron pokemons con los parametros de busqueda... :c</p>
