@@ -1,0 +1,30 @@
+<p-button (onClick)="showDialog()" label="Show" />
+
+
+<p-dialog
+    header=""
+    [modal]="true"
+    [(visible)]="visible"
+    [style]="{ width: '55rem' }"
+    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+    [maximizable]="true">
+    <div class="stats-pokemon-image">
+      <img class="pokemon-alert-image" [src]="pokemon.sprites?.front_default" alt="pokemon image">
+    </div>
+    <p-tabView>
+      <p-tabPanel header="About">
+        <p>Height: {{pokemon.height}} </p>
+        <p>Weight: {{pokemon.weight}} </p>
+        <p>Ablitities:
+          <ng-container *ngFor="let ability of pokemon.abilities; let last = last">
+            {{ ability.ability.name }}<span *ngIf="!last">, </span>
+          </ng-container>
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Base stats">
+        <p-chart type="radar" width="100%" [data]="data" [options]="options"  />
+      </p-tabPanel>
+  </p-tabView>
+</p-dialog>
+
+

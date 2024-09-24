@@ -7,14 +7,14 @@
                 <h3>{{pokemon.name | titlecase }}</h3>
               </div>
               <div class="poke-card-types flex flex-column">
-                <p-button *ngFor="let type of pokemon.types" styleClass="m-1 p-2 pr-2 w-full poke-type" label="{{type.type.name}}"  outlined="true" rounded="true" />
+                <p-button *ngFor="let type of pokemon.types" disabled="true" styleClass="m-1 p-2 pr-2 w-full poke-type" label="{{type.type.name}}"  outlined="true" rounded="true" />
               </div>
           </div>
 
           <div class="poke-card-images col-6">
             <div class="relative-container w-full h-full p-3 relative">
               <img class="bg-image" src="assets/poke-ball.png" alt="fondo-pokemon">
-              <img class="pokemon-image" [src]="pokemon.sprites.other?.home?.front_default" alt="imagen-pokemon">
+              <img class="pokemon-image" [src]="pokemon.sprites?.other?.home?.front_default" alt="imagen-pokemon">
             </div>
           </div>
       </div>
