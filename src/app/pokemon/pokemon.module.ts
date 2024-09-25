@@ -14,6 +14,7 @@ import { ChartModule } from 'primeng/chart';
 import { ButtonModule } from 'primeng/button';
 import { TabViewModule } from 'primeng/tabview';
 import { DialogModule } from 'primeng/dialog';
+import { PokemonRoutingModule } from './pokemon-routing.module';
 
 
 
@@ -25,6 +26,7 @@ import { DialogModule } from 'primeng/dialog';
     PokemonStatsComponent
   ],
   imports: [
+    PokemonRoutingModule,
     CommonModule,
     FormsModule,
     HttpClientModule,
